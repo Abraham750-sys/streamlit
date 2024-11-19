@@ -19,7 +19,7 @@ uploaded_file = st.file_uploader("AQI_data_test1.xlsx", type=["xlsx"])
 
 if uploaded_file is not None:
     # Read the xlsx file
-    data = pd.read_csv(uploaded_file)
+    data = pd.read_xlsx(uploaded_file)
     st.write("### Data Preview")
     st.dataframe(data)
 
