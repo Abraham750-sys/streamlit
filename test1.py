@@ -12,14 +12,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Title of the app
-st.title("Test 1")
+st.title("Test")
 
 # File uploader for xlsx
-uploaded_file = st.file_uploader("AQI_data_test1.xlsx", type=["xlsx"])
+uploaded_file = st.file_uploader("AQI_data_test.csv", type=["csv"])
 
 if uploaded_file is not None:
-    # Read the xlsx file
-    data = pd.read_xlsx(uploaded_file)
+    # Read the csv file
+    data = pd.read_csv(uploaded_file)
     st.write("### Data Preview")
     st.dataframe(data)
 
@@ -72,4 +72,4 @@ if uploaded_file is not None:
 
     st.write("Tip: Ensure the selected columns are numeric for meaningful plots.")
 else:
-    st.info("Please upload a xlsx file to get started.")
+    st.info("Please upload a csv file to get started.")
